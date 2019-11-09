@@ -19,6 +19,7 @@
 		<java.version>1.8</java.version>
 		<admin.starter.client.version>2.1.6</admin.starter.client.version>
 		<spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
+		<maven.git.commit.id.version>3.0.0</maven.git.commit.id.version>
 	</properties>
 
 	<dependencies>
@@ -58,6 +59,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>${maven.git.commit.id.version}</version>
 			</plugin>
 		</plugins>
 	</build>
