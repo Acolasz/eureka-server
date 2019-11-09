@@ -17,6 +17,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<admin.starter.client.version>2.1.6</admin.starter.client.version>
 		<spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
 	</properties>
 
@@ -24,6 +25,15 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${admin.starter.client.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

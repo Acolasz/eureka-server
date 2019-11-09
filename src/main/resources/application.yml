@@ -1,6 +1,22 @@
 server:
-  port: 8900
+  port: ${spring.application.server.port}
 eureka:
   client:
     registerWithEureka: ${eureka.client.registerWithEureka}
     fetchRegistry: ${eureka.client.fetchRegistry}
+    service-url:
+      defaultZone: http://localhost:${spring.application.server.port}/eureka
+spring:
+  application:
+    name: ${spring.application.name}
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000/
+        username: ${spring.boot.admin.client.username}
+        password: ${spring.boot.admin.client.password}
+        instance:
+          metadata:
+            user:
+              name: ${spring.security.user.name}
+              password: ${spring.security.user.password}
